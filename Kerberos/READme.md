@@ -24,3 +24,4 @@ To try and cater for this vulnerability, kerberos developers intended to provide
  Kerberos is used in Posix authentication, and Active Directory, NFS, and Samba. It's also an alternative authentication system to SSH, POP, and SMTP.
 
 #### Kerberos Authentication...
+![image](https://user-images.githubusercontent.com/99975622/211930956-084fcf30-9d55-4c45-a444-8778683ed39e.png)
