@@ -89,3 +89,14 @@ Say a user types the password "password123" and tries to authenticate. We will c
 If those two strings match, the authentication is successful. But those 2 strings do not match, so the authentication will not be
 
 successful and will rely on the "unix_verify_password" function. When using the "unix_verify_password" function to authenticate, the function takes the user's password from "/etc/shadow" and compares it to the user's supplied password. This is how the intended authentication system should work. 
+
+### Resources...
+For more methods...
+```
+https://airman604.medium.com/9-ways-to-backdoor-a-linux-box-f5f83bae5a3c
+```
+
+
+## My socials:
+<br>@ twitter: https://twitter.com/M3tr1c_root
+<br>@ instagram: https://instagram.com/m3tr1c_r00t/
