@@ -25,6 +25,8 @@ __Hands on....__
 - This means that a program contains references to external libraries or shared objects that are needed to execute certain functions or access specific resources.
 - These references are typically resolved by the operating system's dynamic linker/loader at runtime. The dynamic linker/loader locates and loads the required libraries into memory, resolves the references, and establishes the necessary connections between the program and the libraries.
 
+__NB__: If you want to check the libraries that are being shared when it is dynamically linked, you can use ```ldd <binary_file> ```
+
 **Pros of dynamic linking**
 
 - Allows for efficient use of system resources by sharing common libraries among multiple programs. 
